@@ -1,11 +1,15 @@
 const Alexa = require('alexa-sdk');
 
+const cardTitle = 'My First Skill';
+const cardContent = 'Testing 1 2 3!';
+
 const handlers = {
     'LaunchRequest' : function() {
         this.emit('TestIntent');
     },
     'TestIntent' : function() {
-        this.response.speak('Testing 1 2 3');
+        this.response.speak('Testing 1 2 3')
+            .cardRenderer(cardTitle, cardContent, imgObj);
         this.emit(':responseReady');
     }
 };
