@@ -9,7 +9,7 @@ const handlers = {
     },
     'TestIntent' : function() {
         this.response.speak('Testing 1 2 3')
-            .cardRenderer(cardTitle, cardContent, imgObj);
+            .cardRenderer(cardTitle, cardContent);
         this.emit(':responseReady');
     }
 };
